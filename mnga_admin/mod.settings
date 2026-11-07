@@ -1,7 +1,8 @@
-name        = "steam_compliant_mnga_admin"
-source_dir  = "source"
-output_dir  = "output"
+name        = "SteamCompliantMngaAdmin"
+source_dir  = "source/"
+output_dir  = "output/"
 description = [=[]=]
 image       = "preview.jpg"
 tag_modtype = ""
 tag_support = ""
+publish_id = 3835053665
