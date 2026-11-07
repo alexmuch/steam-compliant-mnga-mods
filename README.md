@@ -32,4 +32,4 @@ Server-side settings live in the Shine config generated on first run. `mnga_admi
 
 ## License
 
-MIT — see [LICENSE](LICENSE). Files carrying Unknown Worlds Entertainment copyright headers remain under their original terms.
+MIT — see [LICENSE](LICENSE). Files carrying Unknown Worlds Entertainment copyright headers remain under their original terms; see [NOTICE](NOTICE).
