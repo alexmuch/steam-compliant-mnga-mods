@@ -1,0 +1,16 @@
+{
+    "Categories": [
+		{
+			"Name": "manga_emoji",
+			"Translations": {
+				"enGB": "manga_emoji"
+			}
+		}
+    ],
+    "Emoji": [
+        {
+            "Folder": "ui/shine/emoji/manga/*.tga"
+            "Category": "manga_emoji"
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+modEntry = {
+    FileHooks = "lua/mnga_administration/FileHooks.lua",
+    Server = "lua/mnga_administration/NNSLBadgesManager.lua",
+    Priority = 10
+}

@@ -1,0 +1,19 @@
+{
+	"GAGS": "Gags",
+	"SEARCH_HINT": "Search name, NS2ID, or issuing admin",
+	"PLAYER": "Player",
+	"TYPE": "Type",
+	"GAGGED_BY": "Gagged by",
+	"EXPIRY": "Expiry",
+	"GAG": "Gag",
+	"GAME_GAG": "Game Gag",
+	"UNGAG": "Ungag",
+	"ADD_GAG": "Add Gag",
+	"ADD_GAME_GAG": "Add Game Gag",
+	"SELECT_PLAYER": "Select player",
+	"DURATION": "Duration (for example 30m, 2h, or 0):",
+	"REASON": "Reason:",
+	"NEVER": "Never",
+	"PERMANENT": "Permanent",
+	"TOTAL_RESULTS": "{Count} gags"
+}

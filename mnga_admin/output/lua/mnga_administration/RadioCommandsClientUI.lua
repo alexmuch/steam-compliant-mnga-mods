@@ -1,0 +1,1 @@
+AddClientUIScriptForTeam( "all", "GUIRadioCommands" )

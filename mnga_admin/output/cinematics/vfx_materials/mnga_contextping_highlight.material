@@ -1,0 +1,2 @@
+shader = "cinematics/vfx_materials/mnga_contextping_highlight.surface_shader"
+glowColor = [1, 0, 0]

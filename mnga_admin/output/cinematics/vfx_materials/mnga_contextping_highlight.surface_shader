@@ -1,0 +1,33 @@
+<shader>
+
+
+    <inputs>
+        <input name="glowColor"    type="float3">(1, 0, 0)</input>
+        <input name="rimPower"     type="float">1.25</input>
+        <input name="rimStrength"  type="float">4.0</input>
+        <input name="fillStrength" type="float">0.35</input>
+        <input name="pulseStrength" type="float">1.5</input>
+        <input name="pulseDuration" type="float">0.75</input>
+        <input name="startTime"    type="float">0</input>
+    </inputs>
+
+    <params>
+        <param name="vsNormal">true</param>
+    </params>
+
+    <code>
+    <![CDATA[
+        void MaterialShader(in Material_Input input, inout Material material)
+        {
+            float rim = 1.0 - saturate(dot(input.vsNormal, float3(0, 0, -1)));
+            rim = pow(rim, rimPower);
+
+            float age = max(time - startTime, 0);
+            float pulse = 1.0 + pulseStrength * saturate(1.0 - age / pulseDuration);
+
+            material.emissive = glowColor * (rim * rimStrength + fillStrength) * pulse;
+        }
+    ]]>
+    </code>
+
+</shader>
