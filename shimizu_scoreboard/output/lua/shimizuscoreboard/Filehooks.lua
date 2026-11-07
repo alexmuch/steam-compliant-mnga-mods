@@ -1,5 +1,5 @@
 local kVersion = "2.2.0-development"
-local kName = "Shimizu Scoreboard"
+local kName = "steam_compliant_shimizu_scoreboard"
 
 if Client then
     HPrint(kName .. ", version " .. kVersion)

@@ -1,5 +1,5 @@
 local kVersion = "0.1.0"
-local kName = "mnga_administration"
+local kName = "steam_compliant_mnga_admin"
 
 if Client then
     HPrint(kName .. ", version " .. kVersion)

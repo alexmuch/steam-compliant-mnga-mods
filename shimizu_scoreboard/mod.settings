@@ -1,4 +1,4 @@
-name        = "shimizu quick score"
+name        = "steam_compliant_shimizu_scoreboard"
 source_dir  = "source"
 output_dir  = "output"
 description = [=[]=]

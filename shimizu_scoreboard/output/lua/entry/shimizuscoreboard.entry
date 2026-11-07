@@ -4,7 +4,7 @@
 local Build = Shared.GetBuildNumber()
 if Build >= 340 then
     modEntry = {
-        ModName = "Shimizu Scoreboard",
+        ModName = "steam_compliant_shimizu_scoreboard",
         FileHooks = "lua/shimizuscoreboard/Filehooks.lua",
         Priority = 99
     }

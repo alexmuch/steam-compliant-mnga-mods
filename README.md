@@ -6,8 +6,8 @@ Natural Selection 2 server mods for the MNGA (manga) community, packaged for the
 
 | Folder | Workshop name | Description |
 | --- | --- | --- |
-| [`mnga_admin/`](mnga_admin) | manga admin | Server administration, voting, ready-room queue, ready check, gags/mutes, multi-ping, radio commands, bot brains, weekly quests, and QoL tweaks (Shine extensions + game hooks). |
-| [`shimizu_scoreboard/`](shimizu_scoreboard) | shimizu quick score | Extended scoreboard with skill display, player aliases, voice/chat mute controls, and tech map. |
+| [`mnga_admin/`](mnga_admin) | steam_compliant_mnga_admin | Server administration, voting, ready-room queue, ready check, gags/mutes, multi-ping, radio commands, bot brains, weekly quests, and QoL tweaks (Shine extensions + game hooks). |
+| [`shimizu_scoreboard/`](shimizu_scoreboard) | steam_compliant_shimizu_scoreboard | Extended scoreboard with skill display, player aliases, voice/chat mute controls, and tech map. |
 
 Each mod folder follows the standard NS2 Launch Pad layout:
 

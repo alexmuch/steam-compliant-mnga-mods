@@ -1,4 +1,4 @@
-name        = "manga admin"
+name        = "steam_compliant_mnga_admin"
 source_dir  = "source"
 output_dir  = "output"
 description = [=[]=]
