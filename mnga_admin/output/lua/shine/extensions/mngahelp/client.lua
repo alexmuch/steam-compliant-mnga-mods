@@ -49,7 +49,6 @@ local HELP_PAGES = {
 			{ "!poker", "Open the Texas Hold'em table. Your weekly\nbank starts from your XP (XP never changes)." },
 			{ "!pokerhelp", "Poker rules, timers and weekly scoring." },
 			{ "!pokertop", "Your bank, ranked winnings and the top ten." },
-			{ "!m3", "Open the Match3 puzzle game." },
 			{ "!mangasize 30-120", "Mini-game window size in % (or use - / +)." },
 			{ "!mangaopacity 30-100", "Mini-game window opacity in % (or use - / +)." },
 			{ "sh_dfn", "Console: toggle MNGA notification sounds\n(connected, queue done, round start, AFK).\nAdd true / false to set it. Chat: !sounds" },

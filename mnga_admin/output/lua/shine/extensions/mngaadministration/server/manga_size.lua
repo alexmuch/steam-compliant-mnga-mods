@@ -11,7 +11,7 @@ function Plugin:InitialiseMangaSize()
 	end, true )
 	Command:AddParam{ Type = "number", Min = 30, Max = 120, Round = true,
 		Error = "Usage: !mangasize <30-120>", Help = "UI size percent" }
-	Command:Help( "Sets the shared Poker and Match3 UI size." )
+	Command:Help( "Sets the Poker UI size." )
 	Print( "[MangaSize] Registered !mangasize client-persisted mini-game size command." )
 end
 

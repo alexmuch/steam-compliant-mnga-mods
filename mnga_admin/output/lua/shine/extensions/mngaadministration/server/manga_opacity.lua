@@ -8,7 +8,7 @@ function Plugin:InitialiseMangaOpacity()
 	end, true )
 	Command:AddParam{ Type = "number", Min = 30, Max = 100, Round = true,
 		Error = "Usage: !mangaopacity <30-100>", Help = "UI opacity percent" }
-	Command:Help( "Sets the shared Poker and Match3 window opacity." )
+	Command:Help( "Sets the Poker window opacity." )
 end
 
 function Plugin:CleanupMangaOpacity()

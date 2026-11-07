@@ -183,7 +183,7 @@ table.insert( gModsCategories, {
                     minValue = 0,
                     maxValue = 100,
                     decimalPlaces = 0,
-                    tooltip = "Volume of mini-game sounds (Poker, Match 3), in percent (0-100). Same as the !mangavolume command."
+                    tooltip = "Volume of mini-game sounds (Poker), in percent (0-100). Same as the !mangavolume command."
                 },
                 properties = {
                     { "Label", "Mini-game Sound Volume: " }

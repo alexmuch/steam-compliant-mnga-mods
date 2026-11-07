@@ -11,7 +11,7 @@ function Plugin:InitialiseMangaVolume()
 	end, true )
 	Command:AddParam{ Type = "number", Min = 0, Max = 100, Round = true,
 		Error = "Usage: !mangavolume <0-100>", Help = "volume percent" }
-	Command:Help( "Sets the shared Poker and Match3 sound volume." )
+	Command:Help( "Sets the Poker sound volume." )
 	Print( "[MangaVolume] Registered !mangavolume client-persisted mini-game volume command." )
 end
 
