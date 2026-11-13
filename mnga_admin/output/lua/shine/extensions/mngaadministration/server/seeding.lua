@@ -232,7 +232,7 @@ function Plugin:ScheduleBotReconcile( Reason, Delay )
 end
 
 function Plugin:StartBotAdjustTimer()
-	if self.BotAdjustTimerRunning then return end
+	if self.BotAdjustTimerRunning then return false end
 
 	local Interval = tonumber( botAdjustmentInterval ) or 2
 	if Interval < 0.5 then Interval = 0.5 end
@@ -247,6 +247,7 @@ function Plugin:StartBotAdjustTimer()
 			self:RunBotAdjustment( Gamerules )
 		end
 	end )
+	return true
 end
 
 function Plugin:StopBotAdjustTimer()
@@ -493,6 +494,22 @@ function Plugin:TryAutoStartSeeding( Gamerules, Reason )
 	if self.BotMode ~= "manga" and self.BotMode ~= "vanilla" then return false end
 	if not Gamerules then return false end
 
+	-- Vanilla has no map-load grace of its own: wait out Shine PreGame's start
+	-- delay so late loaders get in and its "waiting for players" timer is honest.
+	if self.BotMode == "vanilla" then
+		local Pregame = Shine.Plugins and Shine.Plugins.pregame
+		local StartDelay = Pregame and Pregame.Enabled and Pregame.Config
+			and tonumber( Pregame.Config.StartDelayInSeconds ) or 0
+		if Shared.GetTime() < StartDelay then
+			if not self.AutoStartDelayNotified then
+				self.AutoStartDelayNotified = true
+				Print( "%s", StringFormat( "[mngabots] vanilla autostart held until pregame start delay=%s maptime=%.1f",
+					tostring( StartDelay ), Shared.GetTime() ) )
+			end
+			return false
+		end
+	end
+
 	local GameInfo = GetGameInfoEntity()
 	if not GameInfo or GameInfo.state >= kGameState.Countdown then
 		return false
@@ -700,8 +717,12 @@ function Plugin:AdjustBots( Gamerules, Reason )
 		Mode = mode
 	}
 
-	self:StartBotAdjustTimer()
-	self:RunBotAdjustment( Gamerules )
+	-- Vanilla: every bot's JoinTeam re-enters here via the UpdateBots hook, so an
+	-- immediate step would chain one bot per frame. Let the timer pace the fill.
+	local TimerStarted = self:StartBotAdjustTimer()
+	if TimerStarted or self.BotMode ~= "vanilla" then
+		self:RunBotAdjustment( Gamerules )
+	end
 end
 
 	-- Commander bot population gating uses non-spectating humans.
